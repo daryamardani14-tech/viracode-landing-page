@@ -1,0 +1,28 @@
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(79, 125, 243, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(124, 58, 237, 0.12),
+      transparent 40%
+    ),
+    var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}

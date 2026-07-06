@@ -1,0 +1,27 @@
+.cta-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #071a53;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  border-color: var(--primary-color);
+}
