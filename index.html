@@ -10,6 +10,10 @@
 
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -34,7 +38,9 @@
         </ul>
 
         <div class="nav-actions">
-          <button class="theme-btn">🌙</button>
+          <button class="theme-btn" aria-label="تغییر حالت نمایش">
+            <i class="bi bi-sun-fill"></i>
+          </button>
 
           <button class="cta-btn">شروع پروژه</button>
         </div>
@@ -165,6 +171,30 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer-overlay"></div>
+
+      <div class="container">
+        <div class="footer-content">
+          <h2 class="footer-content-title">آماده شروع پروژه‌اید؟</h2>
+
+          <p class="footer-content-description">
+            پروژه بعدی شما از اینجا شروع می‌شود.
+          </p>
+
+          <form class="newsletter-form">
+            <input type="email" placeholder="example@email.com" required />
+
+            <button type="submit">عضویت</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-brand">
+        <h2 class="footer-brand-title">VIRACODE</h2>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 

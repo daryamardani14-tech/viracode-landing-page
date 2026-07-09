@@ -12,3 +12,21 @@
 
   --radius: 20px;
 }
+
+.light-mode {
+  --bg-color: #f8fafc;
+
+  --surface-color: #ffffff;
+
+  --primary-color: #4f7df3;
+
+  --secondary-color: #7c3aed;
+
+  --text-color: #111827;
+
+  --text-muted: #64748b;
+
+  --border-color: rgba(0, 0, 0, 0.08);
+
+  --radius: 20px;
+}
