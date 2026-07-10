@@ -4,6 +4,7 @@ const themeBtn = document.querySelector(".theme-btn");
 const body = document.body;
 const themeIcon = themeBtn.querySelector("i");
 const savedTheme = localStorage.getItem("theme");
+const toast = document.querySelector(".theme-toast");
 
 const swiper = new Swiper(".portfolio-slider", {
   effect: "coverflow",
@@ -35,6 +36,16 @@ themeBtn.addEventListener("click", function () {
   } else {
     themeIcon.classList.replace("bi-moon-stars-fill", "bi-sun-fill");
   }
+
+  toast.textContent = body.classList.contains("light-mode")
+    ? "☀️ حالت روشن فعال شد"
+    : "🌙 حالت تیره فعال شد";
+
+  toast.classList.add("show");
+
+  setTimeout(function () {
+    toast.classList.remove("show");
+  }, 2000);
 });
 
 if (savedTheme === "light") {
