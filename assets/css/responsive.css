@@ -1,0 +1,124 @@
+@media (max-width: 992px) {
+  .main-navbar {
+    padding: 0 18px;
+  }
+  .nav-links {
+    display: none !important;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+  .card-1 {
+    right: -40px;
+  }
+
+  .card-2 {
+    left: -20px;
+  }
+
+  .card-3 {
+    right: -40px;
+  }
+
+  .card-4 {
+    left: -20px;
+    bottom: -51px;
+  }
+  .hero-description {
+    max-width: 680px;
+    margin: auto;
+  }
+  .menu-btn {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--surface-color);
+    color: var(--text-color);
+
+    cursor: pointer;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  .floating-card {
+    display: none;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .portfolio-slider {
+    height: 420px;
+  }
+
+  .portfolio-slider .swiper-slide {
+    width: 280px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .footer-content-title {
+    font-size: 32px;
+  }
+
+  .footer-content-description {
+    font-size: 17px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer-brand-title {
+    font-size: 94px;
+    letter-spacing: -4px;
+  }
+
+  .footer-brand {
+    bottom: -35px;
+  }
+}

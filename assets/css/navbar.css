@@ -38,3 +38,7 @@ header {
 
   gap: 14px;
 }
+
+.menu-btn {
+  display: none;
+}
