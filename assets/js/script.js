@@ -1,10 +1,14 @@
 "use strict";
-
-const themeBtn = document.querySelector(".theme-btn");
+const themeBtns = document.querySelectorAll(".theme-btn");
+const themeIcons = document.querySelectorAll(".theme-btn i");
 const body = document.body;
-const themeIcon = themeBtn.querySelector("i");
 const savedTheme = localStorage.getItem("theme");
 const toast = document.querySelector(".theme-toast");
+const menuBtn = document.querySelector(".menu-btn");
+const closeMenuBtn = document.querySelector(".close-menu-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
+const header = document.querySelector("header");
 
 const swiper = new Swiper(".portfolio-slider", {
   effect: "coverflow",
@@ -23,32 +27,60 @@ const swiper = new Swiper(".portfolio-slider", {
   },
 });
 
-themeBtn.addEventListener("click", function () {
-  body.classList.toggle("light-mode");
+function updateThemeIcons() {
+  themeIcons.forEach(function (icon) {
+    if (body.classList.contains("light-mode")) {
+      icon.classList.replace("bi-sun-fill", "bi-moon-stars-fill");
+    } else {
+      icon.classList.replace("bi-moon-stars-fill", "bi-sun-fill");
+    }
+  });
+}
 
-  localStorage.setItem(
-    "theme",
-    body.classList.contains("light-mode") ? "light" : "dark",
-  );
+menuBtn.addEventListener("click", function () {
+  mobileMenu.classList.add("active");
+});
 
-  if (body.classList.contains("light-mode")) {
-    themeIcon.classList.replace("bi-sun-fill", "bi-moon-stars-fill");
-  } else {
-    themeIcon.classList.replace("bi-moon-stars-fill", "bi-sun-fill");
+closeMenuBtn.addEventListener("click", function () {
+  mobileMenu.classList.remove("active");
+});
+
+mobileLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    mobileMenu.classList.remove("active");
+  });
+});
+
+document.addEventListener("click", function (event) {
+  if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+    mobileMenu.classList.remove("active");
   }
+});
 
-  toast.textContent = body.classList.contains("light-mode")
-    ? "☀️ حالت روشن فعال شد"
-    : "🌙 حالت تیره فعال شد";
+themeBtns.forEach(function (themeBtn) {
+  themeBtn.addEventListener("click", function () {
+    body.classList.toggle("light-mode");
 
-  toast.classList.add("show");
+    localStorage.setItem(
+      "theme",
+      body.classList.contains("light-mode") ? "light" : "dark",
+    );
 
-  setTimeout(function () {
-    toast.classList.remove("show");
-  }, 2000);
+    updateThemeIcons();
+
+    toast.textContent = body.classList.contains("light-mode")
+      ? "☀️ حالت روشن فعال شد"
+      : "🌙 حالت تیره فعال شد";
+
+    toast.classList.add("show");
+
+    setTimeout(function () {
+      toast.classList.remove("show");
+    }, 2000);
+  });
 });
 
 if (savedTheme === "light") {
   body.classList.add("light-mode");
-  themeIcon.classList.replace("bi-sun-fill", "bi-moon-stars-fill");
 }
+updateThemeIcons();

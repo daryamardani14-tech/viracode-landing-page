@@ -30,11 +30,11 @@
         </div>
 
         <ul class="nav-links d-flex">
-          <li><a href="#">خانه</a></li>
-          <li><a href="#">خدمات</a></li>
-          <li><a href="#">نمونه‌کار</a></li>
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#services">خدمات</a></li>
+          <li><a href="#portfolio">نمونه‌کار</a></li>
           <li><a href="#">درباره ما</a></li>
-          <li><a href="#">تماس</a></li>
+          <li><a href="#contact">تماس</a></li>
         </ul>
 
         <div class="nav-actions">
@@ -45,14 +45,48 @@
           <button class="cta-btn">شروع پروژه</button>
         </div>
 
-        <button class="menu-btn" aria-label="باز کردن منو">
+        <button
+          class="menu-btn"
+          aria-label="باز کردن منو"
+          aria-expanded="false">
           <i class="bi bi-list"></i>
         </button>
       </nav>
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <div class="logo">
+            <a href="#">
+              <span class="logo-icon">&lt;/&gt;</span>
+              <span class="logo-text">ViraCode</span>
+            </a>
+          </div>
+
+          <button class="close-menu-btn">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-links">
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#services">خدمات</a></li>
+          <li><a href="#portfolio">نمونه‌کار</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#contact">تماس</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+          <button
+            class="theme-btn mobile-theme-btn"
+            aria-label="تغییر حالت نمایش">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+
+          <button class="cta-btn">شروع پروژه</button>
+        </div>
+      </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="container">
           <p class="hero-badge">🚀 آژانس طراحی و توسعه وب</p>
 
@@ -82,7 +116,7 @@
         </div>
       </section>
 
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <div class="section-title">
             <p>خدمات ما</p>
@@ -137,7 +171,7 @@
         </div>
       </section>
 
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <div class="swiper portfolio-slider">
             <div class="swiper-wrapper">
@@ -176,7 +210,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="footer-overlay"></div>
 
       <div class="container">
